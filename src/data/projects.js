@@ -48,26 +48,51 @@ Pour pallier l'absence de capteurs temps réel, nous avons exploité l'historiqu
       'Architecture Hybride (Deep Learning + LLM)'
     ]
   },
-  { 
+{ 
     id: 2, 
     title: 'Plateforme de Gestion SAV (Kiinov)', 
-    shortDescription: 'Développement Full Stack d\'une plateforme de gestion des retours produits et du service après-vente pour améliorer l\'expérience client.', 
-    fullDescription: `Développement complet d'une solution SaaS pour Kiinov, destinée à optimiser la gestion du Service Après-Vente (SAV).
+    shortDescription: 'Développement Full Stack d\'une application Web (MEAN Stack) pour digitaliser la gestion du service après-vente (PFE Licence).', 
+    fullDescription: `### Synthèse du Projet
+Ce projet de fin d'études (Licence) a été réalisé en collaboration avec **Kiinov** et la FST de Tanger. L'objectif principal était de digitaliser entièrement le processus de gestion des retours produits (SAV), passant de méthodes manuelles à une solution Web centralisée et performante.
 
-La plateforme centralise toutes les demandes de retour, suit leur état en temps réel et automatise la communication avec les clients. Elle inclut également un module de statistiques pour analyser les défauts récurrents des produits.`,
-    images: [], 
-    tags: ['Full Stack', 'Web Development', 'Optimisation opérationnelle', 'React', 'Node.js'],
+### La Solution
+Une **plateforme Web Full Stack** (Single Page Application) permettant de :
+- Créer et suivre les tickets de retour en temps réel.
+- Vérifier l'éligibilité au remboursement et la garantie.
+- Prendre et formaliser les décisions (Remboursement, Échange, Réparation).
+- Analyser les performances via un tableau de bord (KPIs par type de panne, délais, décisions).
+
+### Architecture Technique (MVC)
+L'application repose sur une architecture moderne séparant clairement les responsabilités :
+- **Frontend** : Angular (TypeScript) pour une interface utilisateur réactive et fluide.
+- **Backend** : Node.js & Express servant d'API RESTful.
+- **Data** : MongoDB (NoSQL) pour un stockage flexible des documents (tickets, décisions).
+- **Conception** : Modélisation UML complète (Diagrammes de Cas d'Utilisation, Classes, Séquences) avant développement.
+
+### Résultats
+- **85% des objectifs** atteints durant le stage.
+- **Méthodologie Agile XP** appliquée pour des livraisons itératives.
+- **Fonctionnalités clés** : Clonage de dossiers, édition de décisions, filtrage dynamique des retours.`,
+    images: [
+      'projects/kiinov/sav_form.png',
+      'projects/kiinov/decisions_table.png',
+      'projects/kiinov/returns_list.png',
+      'projects/kiinov/returns_grid.png'
+    ],
+    tags: ['MEAN Stack', 'Angular', 'Node.js', 'MongoDB', 'UML', 'Agile XP'],
     technologies: [
-      { name: 'React.js', category: 'Frontend' },
+      { name: 'Angular (TypeScript)', category: 'Frontend' },
       { name: 'Node.js / Express', category: 'Backend' },
-      { name: 'MongoDB', category: 'Database' },
-      { name: 'Docker', category: 'DevOps' }
+      { name: 'MongoDB Atlas', category: 'Base de Données' },
+      { name: 'HTML5 / SCSS', category: 'Web Design' },
+      { name: 'PowerAMC / UML', category: 'Conception' },
+      { name: 'GitLab', category: 'Collaboration' }
     ],
     features: [
-      'Suivi des tickets SAV en temps réel',
-      'Portail client pour les demandes de retour',
-      'Notifications automatiques',
-      'Analytics et reporting pour le management'
+      'Gestion dynamique des tickets de retour',
+      'Prise de décision formelle (Remboursement/Échange)',
+      'Tableau de Bord KPIs',
+      'Architecture SPA (Single Page Application)'
     ]
   }
 ];
