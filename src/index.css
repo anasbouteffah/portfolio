@@ -338,6 +338,38 @@ a {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+/* Back Button */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.btn-back:hover {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateX(-5px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.btn-back svg {
+  transition: transform 0.3s;
+}
+
+.btn-back:hover svg {
+  transform: translateX(-3px);
+}
+
 /* Project Details Page */
 .project-details {
   padding-top: 100px;

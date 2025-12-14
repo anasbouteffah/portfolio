@@ -24,28 +24,37 @@ const ProjectDetails = () => {
     <div className="project-details">
       {/* Hero */}
       <section className="project-hero">
-        <div className="container" style={{textAlign: 'center'}}>
-          <Link to="/" style={{display: 'inline-flex', alignItems: 'center', marginBottom: '2rem', color: 'var(--text-secondary)', textDecoration: 'none'}}>
-            ← Retour
-          </Link>
-          <h1>{project.title}</h1>
-          <p style={{fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto'}}>
-            {project.shortDescription}
-          </p>
+        <div className="container">
+          <div style={{textAlign: 'left', marginBottom: '1rem'}}>
+            <Link to="/" className="btn-back">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              Retour aux projets
+            </Link>
+          </div>
           
-          <div className="tags-container" style={{marginTop: '2rem', display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap'}}>
-            {project.tags.map(tag => (
-              <span key={tag} className="tag-pill" style={{
-                background: 'rgba(99, 102, 241, 0.1)', 
-                color: 'var(--primary-color)', 
-                padding: '0.3rem 1rem', 
-                borderRadius: '50px',
-                border: '1px solid rgba(99, 102, 241, 0.2)',
-                fontSize: '0.9rem'
-              }}>
-                {tag}
-              </span>
-            ))}
+          <div style={{textAlign: 'center'}}>
+            <h1>{project.title}</h1>
+            <p style={{fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto'}}>
+              {project.shortDescription}
+            </p>
+            
+            <div className="tags-container" style={{marginTop: '2rem', display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap'}}>
+              {project.tags.map(tag => (
+                <span key={tag} className="tag-pill" style={{
+                  background: 'rgba(99, 102, 241, 0.1)', 
+                  color: 'var(--primary-color)', 
+                  padding: '0.3rem 1rem', 
+                  borderRadius: '50px',
+                  border: '1px solid rgba(99, 102, 241, 0.2)',
+                  fontSize: '0.9rem'
+                }}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
