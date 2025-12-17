@@ -214,5 +214,45 @@ Ce projet démontre une maîtrise de la chaîne de valeur de la donnée, de l'in
       'Déploiement Conteneurisé (Docker)',
       'Dashboard de Visualisation Live'
     ]
+  },
+  {
+    id: 6,
+    title: 'Smart Chatbot RAG pour la FSTT (GenAI)',
+    shortDescription: 'Assistant intelligent basé sur RAG (Retrieval-Augmented Generation) pour répondre aux questions des étudiants en temps réel.',
+    fullDescription: `### Synthèse du Projet
+Ce projet innovant vise à améliorer l'expérience étudiante à la FST de Tanger via un **Chatbot Intelligent**. Contrairement aux chatbots classiques, celui-ci utilise une architecture **RAG (Retrieval-Augmented Generation)** pour fournir des réponses précises basées exclusivement sur les données officielles de l'université, éliminant les "hallucinations".
+
+### Architecture Technique (GenAI)
+Le système combine la puissance des LLMs avec une base de connaissances vectorielle :
+1.  **Collecte (ETL)** : Scraping des données du site FSTT (Scrapy) et structuration.
+2.  **Indexation Vectorielle** : Stockage des embeddings dans **ChromaDB** pour une recherche sémantique rapide.
+3.  **Génération (RAG)** : Orchestration via **LangChain** :
+    *   *Retrieval* : Récupération des chunks pertinents.
+    *   *Generation* : Synthèse de la réponse par **Gemini AI**.
+4.  **Interface** : Application Full Stack (React + FastAPI) avec WebSockets pour une latence minimale.
+
+### Stack Technologique
+*   **GenAI** : LangChain, Gemini AI, RAG.
+*   **Vector DB** : ChromaDB.
+*   **Backend** : FastAPI (Python Async).
+*   **Frontend** : React JS (Material UI).
+
+### Résultats
+Le chatbot répond avec précision aux questions administratives et pédagogiques ("Qui est le chef de département ?", "Programme du DEUST..."), prouvant la viabilité de l'IA Générative dans un contexte éducatif.`,
+    images: [], // Images non fournies
+    tags: ['GenAI', 'RAG', 'LangChain', 'React', 'FastAPI'],
+    technologies: [
+      { name: 'LangChain', category: 'LLM Orchestration' },
+      { name: 'Gemini AI', category: 'LLM Model' },
+      { name: 'ChromaDB', category: 'Vector Database' },
+      { name: 'FastAPI', category: 'Backend API' },
+      { name: 'React JS', category: 'Frontend' }
+    ],
+    features: [
+      'Architecture RAG Anti-Hallucination',
+      'Recherche Sémantique Vectorielle',
+      'Chat Temps Réel (WebSockets)',
+      'Scraping Automatisé des Données'
+    ]
   }
 ];
