@@ -176,5 +176,43 @@ DataInsight prouve qu'il est possible de rendre des outils mathématiques comple
       'Visualisation de Données Embarquée',
       'Support Multi-Algorithmes (Reg, Classif, Clustering)'
     ]
+  },
+  {
+    id: 5,
+    title: 'Analyse de Sentiments Twitter Temps Réel (Big Data)',
+    shortDescription: 'Architecture Big Data scalable (Kafka, Spark Streaming) pour la prédiction de sentiments en temps réel.',
+    fullDescription: `### Synthèse du Projet
+Ce projet "Big Data", réalisé dans le cadre du Master IASD, met en œuvre une architecture complète pour ingérer et analyser des flux de données massifs en temps réel. L'objectif : prédire le sentiment (Positif, Négatif, Neutre) de tweets à la volée.
+
+### Architecture Technique
+L'infrastructure repose sur un pipeline de données moderne et conteneurisé :
+1.  **Ingestion (Streaming)** : **Apache Kafka** simule et transporte des flux continus de tweets.
+2.  **Traitement (Processing)** : **Apache Spark (Streaming & MLlib)** assure le nettoyage (NLP/NLTK) et la classification vectorielle distribuée.
+3.  **Stockage** : **MongoDB** sauvegarde les prédictions en format NoSQL pour une flexibilité maximale.
+4.  **Visualisation** : Une interface Web (**Flask/Django**) restitue les résultats en temps réel.
+
+### Défis & Compétences
+-   **Scalabilité** : Conception d'un système capable de traiter des volumes massifs (Big Data) grâce au calcul distribué.
+-   **Temps Réel** : Gestion de la latence et du débit via Kafka Streams.
+-   **DevOps** : Déploiement reproductible via **Docker** et Docker Compose.
+-   **Machine Learning Scalable** : Entraînement de modèles (Logistic Regression, XGBoost) sur Spark MLlib.
+
+### Conclusion
+Ce projet démontre une maîtrise de la chaîne de valeur de la donnée, de l'ingestion brute à l'insight actionnable, en utilisant les standards de l'industrie du Big Data.`,
+    images: [], // Images non fournies
+    tags: ['Big Data', 'Apache Spark', 'Kafka', 'MongoDB', 'Docker'],
+    technologies: [
+      { name: 'Apache Spark', category: 'Big Data Processing' },
+      { name: 'Apache Kafka', category: 'Streaming' },
+      { name: 'MongoDB', category: 'Base de Données NoSQL' },
+      { name: 'Docker', category: 'DevOps' },
+      { name: 'Python / Flask', category: 'Backend & Web' }
+    ],
+    features: [
+      'Analyse de Sentiments en Temps Réel',
+      'Pipeline Big Data (Kafka + Spark)',
+      'Déploiement Conteneurisé (Docker)',
+      'Dashboard de Visualisation Live'
+    ]
   }
 ];
