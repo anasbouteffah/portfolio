@@ -94,5 +94,41 @@ L'application repose sur une architecture moderne séparant clairement les respo
       'Tableau de Bord KPIs',
       'Architecture SPA (Single Page Application)'
     ]
+  ,
+  {
+    id: 3,
+    title: 'Prédiction du Risque de Crédit (Machine Learning)',
+    shortDescription: 'Étude comparative de modèles (Régression Logistique vs Processus Gaussiens) pour la classification de risque financier.',
+    fullDescription: `### Synthèse du Projet
+Ce projet explore la mise en œuvre de techniques avancées d'apprentissage automatique pour une problématique financière critique : la prédiction du risque de crédit. L'objectif était de déterminer si un demandeur représente un "bon" ou un "mauvais" risque de crédit.
+
+### Approche Méthodologique
+L'étude s'est concentrée sur la comparaison de deux paradigmes distincts :
+- **Méthode Classique** : Régression Logistique (Modèle paramétrique simple et interprétable).
+- **Méthode Avancée** : Processus Gaussiens (Modèle probabiliste non-paramétrique capturant des relations complexes).
+
+### Processus Technique
+1.  **Data Analysis** : Exploration du jeu de données "German Credit Data" (UCI) pour isoler les facteurs d'influence.
+2.  **Preprocessing** : Nettoyage et préparation des variables pour l'entraînement.
+3.  **Modélisation** : Implémentation et tuning des algorithmes sous Python (Scikit-learn).
+4.  **Comparaison** : Analyse des performances (Accuracy, Robustesse).
+
+### Résultats
+L'étude a révélé une **similarité de performance** entre les deux modèles sur ce dataset spécifique. Cela démontre que pour certains problèmes structurés, la robustesse de la Régression Logistique peut égaler la complexité des Processus Gaussiens, soulignant l'importance de choisir le bon outil pour le bon problème (Occam's razor).`,
+    images: [], // Images non fournies pour l'instant
+    tags: ['Machine Learning', 'Python', 'Scikit-learn', 'Financial Risk'],
+    technologies: [
+      { name: 'Python', category: 'Langage' },
+      { name: 'Scikit-learn', category: 'Bibliothèque ML' },
+      { name: 'Logistic Regression', category: 'Algorithme' },
+      { name: 'Gaussian Processes', category: 'Algorithme' },
+      { name: 'UCI Repository', category: 'Dataset' }
+    ],
+    features: [
+      'Classification Binaire (Risque Bon/Mauvais)',
+      'Comparaison Modèles (Paramétrique vs Probabiliste)',
+      'Analyse Exploratoire de Données Financières',
+      'Validation Croisée et Évaluation'
+    ]
   }
 ];
