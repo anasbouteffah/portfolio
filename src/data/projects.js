@@ -130,5 +130,51 @@ L'étude a révélé une **similarité de performance** entre les deux modèles 
       'Analyse Exploratoire de Données Financières',
       'Validation Croisée et Évaluation'
     ]
+  ,
+  {
+    id: 4,
+    title: 'DataInsight Machine Learning (No-Code GUI)',
+    shortDescription: 'Application de bureau complète pour démocratiser le Machine Learning (Nettoyage, Visualisation, Modélisation) sans écrire de code.',
+    fullDescription: `### Synthèse du Projet
+Réalisé dans le cadre du Master IASD, ce projet vise à **démocratiser l'accès au Machine Learning**. "DataInsight" est une application de bureau qui permet aux utilisateurs non-experts de charger, nettoyer, visualiser et modéliser des données sans écrire une seule ligne de code.
+
+### Fonctionnalités Clés
+L'application couvre l'intégralité du pipeline Data Science :
+1.  **Gestion des Données** : Import CSV, détection automatique des types.
+2.  **Prétraitement (Data Cleaning)** :
+    *   Imputation des valeurs manquantes.
+    *   Détection d'outliers.
+    *   Encodage (Label Encoding) et Scaling.
+3.  **Visualisation Interactive** : Génération de graphiques (Scatter, BoxPlot, Heatmap...) via l'interface.
+4.  **Modélisation (ML Hub)** :
+    *   *Supervisé* : Régression, Random Forest, SVM, KNN...
+    *   *Non-supervisé* : K-Means.
+    *   *Deep Learning* : Réseaux de neurones simples.
+5.  **Évaluation** : Matrices de confusion et rapports de métriques (F1, Precision, Recall).
+
+### Stack Technologique
+Ce projet "Full Python" démontre une capacité à créer des outils complexes :
+*   **GUI** : \`Tkinter\` & \`tksheet\` pour l'interface utilisateur interactive.
+*   **Moteur ML** : \`Scikit-learn\` encapsulé pour l'automatisation.
+*   **Data** : \`Pandas\` & \`NumPy\` pour la manipulation.
+*   **Viz** : \`Matplotlib\` / \`Seaborn\` intégrés dans l'interface.
+
+### Conclusion
+DataInsight prouve qu'il est possible de rendre des outils mathématiques complexes accessibles via une interface ergonomique, comblant le fossé entre expert technique et utilisateur métier.`,
+    images: [], // Images non fournies
+    tags: ['Python', 'Tkinter', 'No-Code', 'Scikit-learn', 'GUI'],
+    technologies: [
+      { name: 'Python', category: 'Langage' },
+      { name: 'Tkinter', category: 'Interface (GUI)' },
+      { name: 'Scikit-learn', category: 'Machine Learning' },
+      { name: 'Pandas', category: 'Data Manipulation' },
+      { name: 'Matplotlib', category: 'Visualisation' }
+    ],
+    features: [
+      'Interface No-Code pour Data Science',
+      'Pipeline Automatisé (Cleaning -> Modeling)',
+      'Visualisation de Données Embarquée',
+      'Support Multi-Algorithmes (Reg, Classif, Clustering)'
+    ]
   }
 ];
