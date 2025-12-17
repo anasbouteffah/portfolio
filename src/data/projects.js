@@ -254,5 +254,45 @@ Le chatbot répond avec précision aux questions administratives et pédagogique
       'Chat Temps Réel (WebSockets)',
       'Scraping Automatisé des Données'
     ]
+  },
+  {
+    id: 7,
+    title: 'Recherche d\'Images par Contenu & Feedback Bayésien (CBIR)',
+    shortDescription: 'Moteur de recherche d\'images intelligent utilisant la Vision par Ordinateur et l\'Inférence Bayésienne pour s\'adapter aux besoins de l\'utilisateur.',
+    fullDescription: `### Synthèse du Projet
+Ce projet explore le domaine de la **Vision par Ordinateur** à travers un système **CBIR (Content-Based Image Retrieval)**. Contrairement à une recherche par mots-clés, ce système permet de trouver des images similaires visuellement (couleurs, textures, formes) à une image requête.
+L'innovation majeure réside dans l'intégration d'un **Retour de Pertinence (Relevance Feedback)** basé sur l'inférence Bayésienne, permettant au système "d'apprendre" des préférences de l'utilisateur pour affiner les résultats.
+
+### Architecture Technique (Micro-services)
+Le projet utilise une architecture hybride robuste couplant le Web et la Data Science :
+1.  **Backend Web (Node/Express)** : Gère l'application utilisateur et l'orchestration.
+2.  **Moteur de Calcul (Python/Flask)** : API dédiée au traitement lourd (extraction de features, calcul de similarité).
+3.  **Frontend (Angular)** : Interface interactive pour l'upload et le feedback.
+4.  **Data (MongoDB)** : Stockage des métadonnées et vecteurs.
+
+### Algorithmes & Mathématiques
+-   **Extraction de Caractéristiques** :
+    -   *Couleur* : Histogrammes et dominantes.
+    -   *Texture* : Filtres de Gabor.
+    -   *Forme* : Moments de Hu.
+-   **Intelligence** : Algorithme **Bayésien** qui pondère dynamiquement l'importance de chaque descripteur (ex: privilégier la couleur sur la forme) selon les feedbacks utilisateurs.
+
+### Résultats
+L'approche par "Relevance Feedback" a démontré une amélioration significative de la Précision et du Rappel après quelques itérations d'interaction avec l'utilisateur, prouvant la capacité du système à s'adapter à l'intention de recherche.`,
+    images: [], // Images non fournies
+    tags: ['Computer Vision', 'Python', 'Angular', 'MEAN Stack', 'Bayesian Inference'],
+    technologies: [
+      { name: 'Python / Flask', category: 'Computer Vision API' },
+      { name: 'Angular', category: 'Frontend' },
+      { name: 'Node.js / Express', category: 'Backend Web' },
+      { name: 'OpenCV / NumPy', category: 'Image Processing' },
+      { name: 'MongoDB', category: 'Database' }
+    ],
+    features: [
+      'Recherche par le contenu visuel (CBIR)',
+      'Retour de Pertinence Bayésien (Apprentissage)',
+      'Extraction de Features (Gabor, Hu, Couleur)',
+      'Architecture Micro-services (Node + Python)'
+    ]
   }
 ];
