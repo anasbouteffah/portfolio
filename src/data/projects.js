@@ -94,7 +94,7 @@ L'application repose sur une architecture moderne séparant clairement les respo
       'Tableau de Bord KPIs',
       'Architecture SPA (Single Page Application)'
     ]
-  ,
+  },
   {
     id: 3,
     title: 'Prédiction du Risque de Crédit (Machine Learning)',
@@ -130,7 +130,7 @@ L'étude a révélé une **similarité de performance** entre les deux modèles 
       'Analyse Exploratoire de Données Financières',
       'Validation Croisée et Évaluation'
     ]
-  ,
+  },
   {
     id: 4,
     title: 'DataInsight Machine Learning (No-Code GUI)',
