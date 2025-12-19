@@ -8,12 +8,14 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetails from './components/ProjectDetails';
+import ParticleBackground from './components/ParticleBackground';
 import './index.css';
 
 function App() {
   return (
     <Router basename="/portfolio">
       <div className="app">
+        <ParticleBackground />
         <Header />
         <Routes>
           <Route path="/" element={
