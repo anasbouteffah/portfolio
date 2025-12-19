@@ -17,18 +17,16 @@ const About = () => {
           <div className="about-content">
             <div className="about-text">
               <p>
-                Je suis <strong>Anas Bouteffah Touiki</strong>, un ingénieur passionné par la fusion entre l'analyse de données massive et l'ingénierie logicielle. 
-                Diplômé d'un <strong>Master en IA & Data Science</strong>, je ne vois pas le code comme une finalité, mais comme un outil pour résoudre des problèmes complexes.
+                Je suis <strong>Anas Bouteffah Touiki</strong>, Ingénieur IA et Architecte de Solutions. Mon expertise ne se limite pas à l'entraînement de modèles : je conçois des <strong>écosystèmes intelligents complets</strong>.
               </p>
               <p>
-                Mon approche est <strong>hybride</strong> : capable de concevoir des modèles mathématiques avancés (Machine Learning, Deep Learning) tout en développant les 
-                applications robustes (Full Stack) nécessaires pour les rendre utilisables par le monde réel.
+                Mon profil est résolument <strong>Transverse</strong>. Je navigue avec aisance entre l'infrastructure <strong>Big Data</strong> (Kafka/Spark), l'innovation <strong>Générative</strong> (RAG/LLMs), et le développement <strong>Full Stack & Cloud</strong> robuste. Certifié AWS et diplômé d'un Master en Data Science, je fusionne rigueur mathématique et excellence opérationnelle.
               </p>
               
               <div className="about-badges">
                 <span className="badge">🎓 Master IASD (2025)</span>
-                <span className="badge">💻 Full Stack Exp.</span>
-                <span className="badge">🚀 Product Mindset</span>
+                <span className="badge">☁️ AWS Certified</span>
+                <span className="badge">🚀 Full Stack Expert</span>
               </div>
             </div>
 
