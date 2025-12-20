@@ -28,10 +28,11 @@ const Header = () => {
 
         <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <ul className="nav-links">
-            <li><a href="/#about" onClick={() => setIsMobileMenuOpen(false)}>À propos</a></li>
-            <li><a href="/#skills" onClick={() => setIsMobileMenuOpen(false)}>Compétences</a></li>
-            <li><a href="/#projects" onClick={() => setIsMobileMenuOpen(false)}>Projets</a></li>
-            <li><a href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}#about`} onClick={() => setIsMobileMenuOpen(false)}>À propos</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}#skills`} onClick={() => setIsMobileMenuOpen(false)}>Compétences</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}#projects`} onClick={() => setIsMobileMenuOpen(false)}>Projets</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}#certifications`} onClick={() => setIsMobileMenuOpen(false)}>Certifications</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}#contact`} onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
           </ul>
         </nav>
       </div>
