@@ -28,6 +28,13 @@ const certifications = [
     description: "Déploiement et gestion des instances EC2 et services de calcul.",
     image: import.meta.env.BASE_URL + "images/certifications/aws-compute.png",
     link: "https://www.credly.com/badges/4c782193-696a-4bcf-9d4c-2a17f385e10f/public_url"
+  },
+  {
+    id: 5,
+    title: "IBM: Introduction to Data Engineering",
+    description: "Fondamentaux du Data Engineering, Écosystème Big Data et Cycle de vie de la donnée.",
+    image: import.meta.env.BASE_URL + "images/certifications/ibm-data-engineering.png",
+    link: "https://www.coursera.org/account/accomplishments/verify/6CSFQRSZQNRX"
   }
 ];
 
