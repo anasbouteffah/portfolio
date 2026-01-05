@@ -315,7 +315,12 @@ Ce projet démontre la construction d'un pipeline ETL moderne pour traiter des d
 ### Challenge Technique
 Le défi principal était de concevoir un modèle de données optimisé pour les requêtes analytiques (Analytics-Ready), en passant d'un fichier plat à un schéma en étoile structuré, tout en automatisant le processus via un orchestrateur moderne.
 `,
-    images: [],
+    images: [
+      "projects/uber/arch.png",
+      "projects/uber/data_model.jpeg",
+      "projects/uber/fare_distribution.png",
+      "projects/uber/trip_distance_distribution.png" 
+    ],
     tags: ["Data Engineering", "ETL", "Mage.ai", "Python", "Data Modeling"],
     technologies: [
       { name: "Python", category: "Language" },
