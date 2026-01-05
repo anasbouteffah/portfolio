@@ -294,5 +294,42 @@ L'approche par "Relevance Feedback" a démontré une amélioration significative
       'Extraction de Features (Gabor, Hu, Couleur)',
       'Architecture Micro-services (Node + Python)'
     ]
+  },
+  {
+    id: 8,
+    title: "Uber Data Analytics ETL Pipeline",
+    shortDescription: "Pipeline Data Engineering complet pour traiter et analyser les trajets Uber (Mage.ai, Python, PowerBI).",
+    fullDescription: `
+### Architecture Data Engineering
+Ce projet démontre la construction d'un pipeline ETL moderne pour traiter des données massives de trajets Uber. L'objectif était de transformer des données brutes en un modèle analytique performant (Star Schema) pour extraire des insights métiers.
+
+### Flux de Données (Pipeline)
+1.  **Ingestion** : Chargement des records de trajets bruts.
+2.  **Transformation** : Nettoyage et modélisation dimensionnelle avec **Pandas**.
+    -   Création du *Star Schema* (Tables de Faits et Dimensions).
+    -   Gestion des types de données et valeurs manquantes.
+3.  **Orchestration** : Automatisation du flux de travail avec **Mage.ai**.
+    -   Extraction -> Transformation -> Chargement (ETL).
+4.  **Visualisation** : Création de tableaux de bord interactifs sur **Google Looker Studio** et **Power BI**.
+
+### Challenge Technique
+Le défi principal était de concevoir un modèle de données optimisé pour les requêtes analytiques (Analytics-Ready), en passant d'un fichier plat à un schéma en étoile structuré, tout en automatisant le processus via un orchestrateur moderne.
+`,
+    images: [],
+    tags: ["Data Engineering", "ETL", "Mage.ai", "Python", "Data Modeling"],
+    technologies: [
+      { name: "Python", category: "Language" },
+      { name: "Mage.ai", category: "Orchestration" },
+      { name: "Pandas", category: "Transformation" },
+      { name: "Google Looker Studio", category: "Visualization" },
+      { name: "Power BI", category: "Visualization" }
+    ],
+    features: [
+      "Pipeline ETL Automatisé avec Mage.ai",
+      "Modélisation Dimensionnelle (Star Schema)",
+      "Transformation de Données avec Pandas",
+      "Analytique Visuelle (Revenue, Routes)"
+    ],
+    github: "https://github.com/anasbouteffah/uber-etl-pipeline-data-engineering-project"
   }
 ];
