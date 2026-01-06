@@ -318,6 +318,7 @@ Le défi principal était de concevoir un modèle de données optimisé pour les
     images: [
       "projects/uber/arch.png",
       "projects/uber/data_model.jpeg",
+      "projects/uber/mage_pipeline_ui.png",
       "projects/uber/fare_distribution.png",
       "projects/uber/trip_distance_distribution.png" 
     ],
