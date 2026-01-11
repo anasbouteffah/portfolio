@@ -35,6 +35,13 @@ const certifications = [
     description: "Fondamentaux du Data Engineering, Écosystème Big Data et Cycle de vie de la donnée.",
     image: import.meta.env.BASE_URL + "images/certifications/ibm-data-engineering.png",
     link: "https://www.coursera.org/account/accomplishments/verify/6CSFQRSZQNRX"
+  },
+  {
+    id: 6,
+    title: "IBM: Python for Data Science, AI & Development",
+    description: "Programmation Python avancée, manipulation de données (Pandas/NumPy) et introduction aux APIs.",
+    image: import.meta.env.BASE_URL + "images/certifications/ibm-data-engineering.png",
+    link: "https://coursera.org/share/4ea5283be1bc5fd9cd9e57269fd3087f"
   }
 ];
 
@@ -61,7 +68,7 @@ const Certifications = () => {
               <div className="cert-info">
                 <h4>{cert.title}</h4>
                 <p>{cert.description}</p>
-                <div className="cert-link">Voir Credly ↗</div>
+                <div className="cert-link">Voir Certificat ↗</div>
               </div>
             </a>
           ))}
