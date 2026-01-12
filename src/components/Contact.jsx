@@ -14,14 +14,14 @@ const Contact = () => {
     // L'utilisateur devra créer un compte EmailJS
     
     // Configuration temporaire pour démo
-    const SERVICE_ID = 'service_portfolio'; 
-    const TEMPLATE_ID = 'template_portfolio';
-    const PUBLIC_KEY = 'user_portfolio_key';
+    // -----------------------------------------------------------
+    // ⚠️ IMPORTANT : Remplacez ces 3 valeurs par les vôtres (EmailJS Dashboard)
+    // -----------------------------------------------------------
+    const SERVICE_ID = 'service_portfolio';   // Exemple: "service_gmail"
+    const TEMPLATE_ID = 'template_portfolio'; // Exemple: "template_contact"
+    const PUBLIC_KEY = 'user_portfolio_key';  // Exemple: "user_WaB..."
 
-    // Note: Sans les vrais IDs, cela renverra une erreur, mais la logique UI sera là.
-    // Je vais laisser un commentaire explicite pour l'utilisateur.
-
-    emailjs.sendForm('service_94y13ae', 'template_5q0000a', form.current, 'v1_55_Z_88_xx') // Exemple placeholders
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then((result) => {
           setStatus('success');
           form.current.reset();
