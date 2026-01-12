@@ -1,36 +1,39 @@
-import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
 
 const Contact = () => {
-  const form = useRef();
   const [status, setStatus] = useState('idle'); // idle, sending, success, error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
 
-    // MEMENTO: ID service/template à remplacer par les vrais plus tard par l'utilisateur
-    // Pour l'instant on met les placeholders standards
-    // L'utilisateur devra créer un compte EmailJS
-    
-    // Configuration temporaire pour démo
-    // -----------------------------------------------------------
-    // ⚠️ IMPORTANT : Remplacez ces 3 valeurs par les vôtres (EmailJS Dashboard)
-    // -----------------------------------------------------------
-    const SERVICE_ID = 'service_portfolio';   // Exemple: "service_gmail"
-    const TEMPLATE_ID = 'template_portfolio'; // Exemple: "template_contact"
-    const PUBLIC_KEY = 'user_portfolio_key';  // Exemple: "user_WaB..."
+    const formData = new FormData(e.target);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-      .then((result) => {
-          setStatus('success');
-          form.current.reset();
-      }, (error) => {
-          console.log(error.text);
-          // Pour la démo, si echec (car clés invalides), on peut simuler un succès pour que l'utilisateur voie l'UI
-          // Mais il vaut mieux montrer l'erreur pour qu'il configure.
-          setStatus('error');
-      });
+    try {
+        const response = await fetch("https://formsubmit.co/ajax/boutanas8@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            setStatus('success');
+            e.target.reset();
+        } else {
+            console.error("FormSubmit Error:", result);
+            setStatus('error');
+        }
+    } catch (error) {
+        console.error("Fetch Error:", error);
+        setStatus('error');
+    }
   };
 
   return (
@@ -38,28 +41,35 @@ const Contact = () => {
       <div className="container">
         <h2 className="section-title">CONTACT <span className="dot">.</span></h2>
         
-        <form className="contact-form" ref={form} onSubmit={handleSubmit} style={{maxWidth: '600px', margin: '0 auto'}}>
-            <div style={{marginBottom: '1rem', textAlign: 'left'}}>
-               Pour me contacter, envoyez-moi un message directement ici.
+        <form className="contact-form" onSubmit={handleSubmit} style={{maxWidth: '600px', margin: '0 auto'}}>
+            <div style={{marginBottom: '1rem', textAlign: 'left', color: 'var(--text-secondary)'}}>
+               Envoyez-moi un message pour toute opportunité ou collaboration.
             </div>
 
-            <input type="text" name="user_name" placeholder="Nom" required disabled={status === 'sending'} />
-            <input type="email" name="user_email" placeholder="Email" required disabled={status === 'sending'} />
-            <textarea name="message" placeholder="Message" rows="5" required disabled={status === 'sending'}></textarea>
+            {/* Hidden Configurations for FormSubmit */}
+            <input type="hidden" name="_subject" value="Nouveau message depuis le Portfolio !" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <input type="text" name="name" placeholder="Votre Nom" required disabled={status === 'sending' || status === 'success'} />
+            <input type="email" name="email" placeholder="Votre Email" required disabled={status === 'sending' || status === 'success'} />
+            <textarea name="message" placeholder="Votre Message" rows="5" required disabled={status === 'sending' || status === 'success'}></textarea>
             
-            <button type="submit" className="btn primary" disabled={status === 'sending'} style={{width: '100%', marginTop: '1rem'}}>
+            <button type="submit" className="btn primary" disabled={status === 'sending' || status === 'success'} style={{width: '100%', marginTop: '1rem'}}>
               {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le message'}
             </button>
 
             {status === 'success' && (
-              <div style={{marginTop: '1rem', padding: '1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid #10b981', borderRadius: '8px', color: '#10b981'}}>
-                ✅ Message envoyé avec succès ! Je vous répondrai très vite.
+              <div style={{marginTop: '1.5rem', padding: '1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid #10b981', borderRadius: '8px', color: '#10b981'}}>
+                <strong>✅ Message envoyé !</strong><br/>
+                Merci de m'avoir contacté. Je vérifierai ma boîte <em>boutanas8@gmail.com</em> et je vous répondrai rapidement.
               </div>
             )}
 
             {status === 'error' && (
-              <div style={{marginTop: '1rem', padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', border: '1px solid #ef4444', borderRadius: '8px', color: '#ef4444'}}>
-                ⚠️ Une erreur est survenue. Veuillez vérifier votre configuration EmailJS ou contactez-moi sur LinkedIn.
+              <div style={{marginTop: '1.5rem', padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', border: '1px solid #ef4444', borderRadius: '8px', color: '#ef4444'}}>
+                ⚠️ Oups, une erreur est survenue.<br/>
+                Vous pouvez m'envoyer un email direct à : <a href="mailto:boutanas8@gmail.com" style={{color: 'inherit', textDecoration: 'underline'}}>boutanas8@gmail.com</a>
               </div>
             )}
         </form>
