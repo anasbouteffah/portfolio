@@ -17,10 +17,10 @@ const About = () => {
           <div className="about-content">
             <div className="about-text">
               <p>
-                Je suis <strong>Anas Bouteffah Touiki</strong>, titulaire d'un <strong>Master en Data Science</strong>. J'ai orienté mon parcours académique vers l'Intelligence Artificielle et l'étude approfondie des données massives.
+                Je suis <strong>Anas Bouteffah Touiki</strong>, titulaire d’un <strong>Master en Data Science</strong>. Mon parcours académique est orienté vers l’<strong>Intelligence Artificielle</strong>, l’analyse de données et l’étude des données à grande échelle.
               </p>
               <p>
-                Au cours de ma formation d'ingénieur, j'ai développé une <strong>solide rigueur mathématique</strong> indispensable à la modélisation complexe. Ma spécialisation universitaire m'a permis d'acquérir les fondements théoriques nécessaires pour concevoir des architectures innovantes et performantes.
+                Au cours de ma formation, j’ai développé une base solide en <strong>statistiques et en modélisation</strong>, ainsi que les fondements théoriques nécessaires pour aborder des problématiques IA de manière rigoureuse.
               </p>
               
               <div className="about-badges">
