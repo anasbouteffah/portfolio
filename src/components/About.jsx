@@ -17,10 +17,10 @@ const About = () => {
           <div className="about-content">
             <div className="about-text">
               <p>
-                Je suis <strong>Anas Bouteffah Touiki</strong>, Ingénieur IA et Architecte de Solutions. Mon expertise ne se limite pas à l'entraînement de modèles : je conçois des <strong>écosystèmes intelligents complets</strong>.
+                Je suis <strong>Anas Bouteffah Touiki</strong>, titulaire d'un <strong>Master en Data Science</strong>. J'ai orienté mon parcours académique vers l'Intelligence Artificielle et l'étude approfondie des données massives.
               </p>
               <p>
-                Mon profil est résolument <strong>Transverse</strong>. Je navigue avec aisance entre l'infrastructure <strong>Big Data</strong> (Kafka/Spark), l'innovation <strong>Générative</strong> (RAG/LLMs), et le développement <strong>Full Stack & Cloud</strong> robuste. Certifié AWS et diplômé d'un Master en Data Science, je fusionne rigueur mathématique et excellence opérationnelle.
+                Au cours de ma formation d'ingénieur, j'ai développé une <strong>solide rigueur mathématique</strong> indispensable à la modélisation complexe. Ma spécialisation universitaire m'a permis d'acquérir les fondements théoriques nécessaires pour concevoir des architectures innovantes et performantes.
               </p>
               
               <div className="about-badges">
