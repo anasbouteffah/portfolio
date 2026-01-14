@@ -526,6 +526,18 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .profile-wrapper {
+    transform: none !important; /* Force straight image on mobile */
+    width: 260px; /* Slight adjustment for better mobile fit */
+    height: 340px;
+  }
+  
+  .profile-wrapper:hover {
+    transform: none !important; /* Disable hover movement on touch devices too */
+  }
+}
+
 /* Projects */
 .projects {
   padding: 5rem 0;
