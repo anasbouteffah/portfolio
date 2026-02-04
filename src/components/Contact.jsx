@@ -1,33 +1,14 @@
-import React, { useState, useRef } from 'react';
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useState } from 'react';
 
 const Contact = () => {
     const [status, setStatus] = useState('idle'); // idle, sending, success, error
-    const [captchaToken, setCaptchaToken] = useState(null);
-    const captchaRef = useRef(null);
-
-    // Clé de test (développement) fournie par Google : 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
-    // L'utilisateur devra mettre sa propre SITE KEY ici pour la production.
-    const RECAPTCHA_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"; 
-
-    const handleCaptchaChange = (token) => {
-        setCaptchaToken(token);
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        if (!captchaToken) {
-            alert("Veuillez valider le CAPTCHA SVP.");
-            return;
-        }
-
         setStatus('sending');
 
         const formData = new FormData(e.target);
-        
-        // On n'envoie pas le token g-recaptcha-response à FormSubmit car en version gratuite AJAX ils ne le valident pas strict.
-        // Mais la protection CLIEN empêche déjà l'envoi automatisé basique sans interaction JS.
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
 
@@ -46,8 +27,6 @@ const Contact = () => {
             if (response.ok) {
                 setStatus('success');
                 e.target.reset();
-                setCaptchaToken(null);
-                captchaRef.current.reset(); // Reset visuel du captcha
             } else {
                 console.error("FormSubmit Error:", result);
                 setStatus('error');
@@ -70,31 +49,20 @@ const Contact = () => {
 
                     {/* Hidden Configurations for FormSubmit */}
                     <input type="hidden" name="_subject" value="Nouveau message depuis le Portfolio !" />
-                    <input type="hidden" name="_captcha" value="false" /> {/* On gère le captcha nous-même en front */}
+                    <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_template" value="table" />
 
                     <input type="text" name="name" placeholder="Votre Nom" required disabled={status === 'sending' || status === 'success'} />
                     <input type="email" name="email" placeholder="Votre Email" required disabled={status === 'sending' || status === 'success'} />
                     <textarea name="message" placeholder="Votre Message" rows="5" required disabled={status === 'sending' || status === 'success'}></textarea>
-                    
-                    <div style={{margin: '1rem 0', display: 'flex', justifyContent: 'center'}}>
-                        <ReCAPTCHA
-                            ref={captchaRef}
-                            sitekey={RECAPTCHA_SITE_KEY}
-                            onChange={handleCaptchaChange}
-                            theme="dark" // ou "light" selon votre thème
-                        />
-                    </div>
 
                     <button 
                         type="submit" 
                         className="btn primary" 
-                        disabled={status === 'sending' || status === 'success' || !captchaToken} 
+                        disabled={status === 'sending' || status === 'success'} 
                         style={{
                             width: '100%', 
-                            marginTop: '1rem',
-                            opacity: !captchaToken ? 0.5 : 1,
-                            cursor: !captchaToken ? 'not-allowed' : 'pointer'
+                            marginTop: '1rem'
                         }}
                     >
                         {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le message'}
